@@ -1,8 +1,12 @@
 package com.khorbos.enderite.init;
 
 import com.khorbos.enderite.Enderite;
+import com.khorbos.enderite.objects.items.tools.EnderiteAxeItem;
+import com.khorbos.enderite.objects.items.tools.EnderiteHoeItem;
+import com.khorbos.enderite.objects.items.tools.EnderitePickaxeItem;
+import com.khorbos.enderite.objects.items.tools.ModToolMaterials;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -12,11 +16,11 @@ public class ItemRegistries {
     public static final Item ENDERITE_INGOT = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
     public static final Item TOTEM_OF_UNFALLING = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
 
-    public static final Item ENDERITE_PICKAXE = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
-    public static final Item ENDERITE_AXE = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
-    public static final Item ENDERITE_SHOVEL = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
-    public static final Item ENDERITE_HOE = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
-    public static final Item ENDERITE_SWORD = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
+    public static final Item ENDERITE_PICKAXE = new EnderitePickaxeItem();
+    public static final Item ENDERITE_AXE = new EnderiteAxeItem();
+    public static final Item ENDERITE_SHOVEL = new ShovelItem(ModToolMaterials.ENDERITE, 1.5F, -3.0F, new Item.Settings().group(Enderite.ENDERITE_GROUP));
+    public static final Item ENDERITE_HOE = new EnderiteHoeItem();
+    public static final Item ENDERITE_SWORD = new SwordItem(ModToolMaterials.ENDERITE, 3, -2.4F, new Item.Settings().group(Enderite.ENDERITE_GROUP));
 
     public static final Item ENDERITE_HELMET = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
     public static final Item ENDERITE_CHESTPLATE = new Item(new FabricItemSettings().group(Enderite.ENDERITE_GROUP));
