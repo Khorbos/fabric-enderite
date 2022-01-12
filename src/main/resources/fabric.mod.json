@@ -22,6 +22,9 @@
       "com.khorbos.enderite.Enderite"
     ]
   },
+  "mixins": [
+    "enderite.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
