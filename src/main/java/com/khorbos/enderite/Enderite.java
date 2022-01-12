@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 public class Enderite implements ModInitializer {
 	public static final String ID = "enderite";
 	public static final String NAME = "Enderite Mod";
-	public static final ItemGroup ENDERITE_GROUP = FabricItemGroupBuilder.build(new Identifier(ID, "enderite"), () -> new ItemStack(null));
+	public static final ItemGroup ENDERITE_GROUP = FabricItemGroupBuilder.build(new Identifier(ID, "enderite"), () -> new ItemStack(ItemRegistries.ENDERITE_INGOT));
 
 	@Override
 	public void onInitialize() {
